@@ -1,0 +1,202 @@
+/* -----welcome page----- */
+
+.welcome-page-wrapper {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 100px;
+}
+
+.difficulty-selecter-wrapper{
+    display: grid;
+    height: 300px;
+    width: 400px;
+    background: white;
+    grid-template-rows: 1fr, 1fr;
+}
+
+.box-with-info {
+    display: grid;
+    grid-template-rows: 1fr, 3fr, 1fr;
+}
+
+.difficulty{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.control{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-difficulty{ 
+    width: 100%;
+    height: 50%;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-left: 600px;    
+    position: absolute;
+    z-index: 1;
+}
+  
+.control:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* -----Panel----- */
+.panel-wrapper {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.panel-wrapper .over-layer{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 50%;
+}
+
+.panel-wrapper .panel{
+    width: 50%;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    right: 25%;
+    background: #fff;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    z-index: 99;
+    opacity: 90%;
+}
+.panel .head{
+    padding-right: 1rem;
+    text-align: right;
+    
+}
+
+.close{
+    color: black;
+    font-size: 2rem;
+}
+
+.panel-visible{
+    visibility: visible;
+}
+
+.panel-invisible{
+    visibility: hidden;
+}
+
+.text-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* -----navbar----- */
+.nav-bar{
+    padding: 0;
+    position: sticky;
+    top:0;
+    height:50px;
+    width: 100%;
+    background: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-title{
+    width:60%;
+}
+
+.nav-bar-control{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-btn{
+    display:flex;
+    height: 100%;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-btn{
+    height: 80%;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* -----Board----- */
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+}
+
+/* -----Square----- */
+
+.square{ 
+    width: 50px;
+    height: 50px;
+    border: 2px solid gray;
+}
+
+.square:hover{
+    border: 6px solid red;
+}
+
+.black{ 
+    background-color: black;
+}
+
+.white{ 
+    background-color: white;
+}
+
+.red{ 
+    background-color: red;
+}
+
+/* -----PalyGround----- */
+.disabled{
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
+}
