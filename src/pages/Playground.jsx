@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 export default function Playground() {
     const win = useSelector((state) => state.winClick)
-    const className = win === 5 ? 'active' : 'disabled'
+    const className = win >= 17 ? 'active' : 'disabled'
 
     return (
         <React.Fragment>
