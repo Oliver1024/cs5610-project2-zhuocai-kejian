@@ -4,7 +4,7 @@ import Panel from 'components/Panel';
 import Board from 'components/Board';
 import { useSelector } from 'react-redux';
 
-export default function Playground() {
+export default function PlaygroundFreeplay() {
     const win = useSelector((state) => state.winClick)
     const className = win >= 17 ? 'active' : 'disabled'
 
@@ -12,7 +12,9 @@ export default function Playground() {
         <React.Fragment>
             <Navbar />
             <Panel />
-            <Board />
+            <div className="playground-mid-wrapper">
+                <Board />
+            </div>
             <h1 className={className}> You win!!!</h1>
         </React.Fragment>
     )
