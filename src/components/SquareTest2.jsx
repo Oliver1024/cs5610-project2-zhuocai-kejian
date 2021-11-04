@@ -12,10 +12,14 @@ export default function Square(props) {
         }),
     }))
 
+    const dispatch = useDispatch()
 
 
     return (
-        <span ref={drag} className="boat4 red" >
+        <span ref={drag} className="boat4 red" onDragStart={dispatch({
+            type: "dragStart",
+            symbol: props.symbol
+        })}>
         </span>
     )
 };
