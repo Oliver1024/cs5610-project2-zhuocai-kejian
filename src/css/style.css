@@ -8,18 +8,22 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url("../images/farm.png");
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
 }
 
 .title{
     font-size: 100px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .difficulty-selecter-wrapper{
     display: grid;
-    height: 300px;
+    height: 500px;
     width: 400px;
-    background: white;
-    grid-template-rows: 1fr, 1fr;
+
 }
 
 .box-with-info {
@@ -47,19 +51,68 @@
 .btn-difficulty{ 
     width: 100%;
     height: 50%;
+    background-image: url("images/button.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.btn-difficulty:hover{
+    filter: brightness(1.25);
+}
+
+.btn-help{
+    width: 100px;
+    height: 100px;
+    background-image: url("images/help.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+    align-self: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+}
+
+.btn-help:hover{
+    filter: brightness(1.25);
 }
 
 .tooltiptext {
     visibility: hidden;
-    width: 200px;
-    background-color: black;
-    color: #fff;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    align-items:center;
+    justify-content: center;
+    background-image: url("images/board.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #000;
     text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.2rem;
     padding: 5px 0;
     border-radius: 6px;
     margin-left: 600px;    
     position: absolute;
     z-index: 1;
+    pointer-events:none;
+}
+
+.control{
+    text-decoration: none;
+}
+
+.tooltiptext .tip-wrapper{
+    width: 80%;
+    cursor: default;
+    pointer-events:none;
 }
   
 .control:hover .tooltiptext {
@@ -124,6 +177,7 @@
 
 /* -----navbar----- */
 .nav-bar{
+    z-index: 99;
     padding: 0;
     position: sticky;
     top:0;
@@ -162,37 +216,123 @@
 
 /* -----Board----- */
 
+
 .board{
+    background-color: Transparent;
+    position: absolute;
     display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: repeat(10, 60px);
+    grid-template-rows: repeat(10, 60px);
 }
 
 /* -----Square----- */
 
 .square{ 
-    width: 50px;
-    height: 50px;
-    border: 2px solid gray;
+    width: 60px;
+    height: 60px;
+    cursor: pointer
+}
+
+.square-human{ 
+    width: 60px;
+    height: 60px;
+    cursor: not-allowed;
 }
 
 .square:hover{
-    border: 6px solid red;
+    border: 6px solid orange;
+    border-radius: 0.55px;
 }
 
 .black{ 
-    background-color: black;
+    background-image: url("images/grass-empty.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events:none;
+    cursor: not-allowed;
 }
 
 .white{ 
-    background-color: white;
+    background-image: url("images/grass.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .red{ 
     background-color:red;
+    pointer-events:none;
+}
+
+.green{ 
+    background-image: url("images/pig.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events:none;
+    cursor: not-allowed;
+}
+
+.blue{ 
+    background-image: url("images/cow.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events:none;
+    cursor: not-allowed;
+}
+
+.purple{ 
+    background-image: url("images/sheep.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events:none;
+    cursor: not-allowed;
+}
+
+.yellow{ 
+    background-image: url("images/chicken.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events:none;
+    cursor: not-allowed;
+}
+
+.gray {
+    background-image: url("images/grass-empty.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: not-allowed;
+}
+
+.caught { 
+    border: 6px solid red;
+
 }
 
 /* -----PalyGround----- */
+.playground{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: url("images/background.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.playground-double-wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .disabled{
     visibility: hidden;
 }
@@ -210,13 +350,23 @@
 }
 
 .playground-double-wrapper{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.board-background{
+    position: relative;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(122, 93, 11);
 }
 
 .board-wrapper{
-    height: 100vh;
-    width: 100%;
+    
+    height: 700px;
+    width: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,18 +374,13 @@
 
 /* ----- drag test ----- */
 
-.boat{
-    width: 200px;
-    height: 100px;
-    border: 2px solid black;
-}
 
 .square-empty{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 2px solid gray;
 }
 

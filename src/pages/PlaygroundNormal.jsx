@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from 'components/Navbar';
 import Panel from 'components/Panel';
 import Board from 'components/Board';
-import BoardHuman from 'components/BoardHuman';
+import BoardPlayer from 'components/BoardPlayer';
 import { useSelector } from 'react-redux';
 
-export default function PlaygroundFreeplay() {
+export default function PlaygroundNormal() {
     const win = useSelector((state) => state.winClick)
     const className = win >= 17 ? 'active' : 'disabled'
 
@@ -13,15 +13,16 @@ export default function PlaygroundFreeplay() {
         <React.Fragment>
             <Navbar />
             <Panel />
-            <div className="playground-double-wrapper">
+            <div className="playground-double-wrapper playground">
                 <div className="board-wrapper board-ai">
+                    <div className="board-background"></div>
                     <Board />
                 </div>
                 <div className="board-wrapper board-human">
-                    <BoardHuman />
+                    <div className="board-background"></div>
+                    <BoardPlayer />
                 </div>
             </div>
-            <h1 className={className}> You win!!!</h1>
         </React.Fragment>
     )
 }

@@ -13,31 +13,37 @@ export default function Welcome() {
             <Panel />
             <div className="welcome-page-wrapper">
                 <div className="title">
-                    Battle Ship
+                    WHERE'D U HIDE
                 </div>
                 <div className="box-with-info">
                     <div className="difficulty-selecter-wrapper ">
                         <span className="difficulty">
                             <Link to="/playground-normal" className="control" >
-                                <button type="button" className="btn btn-primary btn-difficulty" >Normal Game</button>
-                                <span class="tooltiptext">Start a normal game with a stupid stupid AI!</span>
+                                <button type="button" className="btn btn-difficulty" >
+                                    Normal Game</button>
+                                <span class="tooltiptext">
+                                    <div className="tip-wrapper">
+                                        Start a normal game with a stupid stupid AI!
+                                    </div>
+                                </span>
                             </Link>
 
                         </span>
                         <span className="difficulty">
                             <Link to="/playground-freeplay" className="control" id="free-play">
-                                <button type="button" className="btn btn-primary btn-difficulty">Free Play</button>
-                                <span class="tooltiptext">Get a free play with no one competing with you!</span>
+                                <button type="button" className="btn btn-difficulty">Free Play</button>
+                                <div class="tooltiptext">
+                                    <div className="tip-wrapper">
+                                        Get a free play with no one competing with you!
+                                    </div>
+                                </div>
                             </Link>
                         </span>
-                        <button className="btn btn-danger" onClick={() => dispatch({
-                            type: "panel-click",
-                            active: "true"
-                        })}>Instructions</button>
                         <span className="difficulty">
-                            <Link to="/drag-test" className="control">
-                                <button className="btn btn-danger btn-difficulty" width="100">drag and drop test</button>
-                            </Link>
+                            <button className="btn btn-help" onClick={() => dispatch({
+                                type: "panel-click",
+                                active: "true"
+                            })}>?</button>
                         </span>
                     </div>
                 </div>

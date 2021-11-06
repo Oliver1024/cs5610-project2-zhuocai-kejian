@@ -1,25 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import SquareEmpty from "./SquareEmpty"
 import SquareTest from "./SquareTest"
 import { useSelector } from 'react-redux';
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { Piece } from "components/Piece"
+import { Game, Game2 } from 'components/Game'
 
 
-export default function Board({ game }) {
+export default function Board() {
+    const game = useMemo(() => new Game(), []);
+    const game2 = useMemo(() => new Game2(), []);
     const boardState = useSelector((state) => state.drag)
     const boardComponent = [];
-    const [[boatX, boatY], setBoatPos] = useState(game.boatPosition);
+    const [[boat1X, boat1Y], setBoatPos] = useState(game.boatPosition);
     useEffect(() => game.observe(setBoatPos));
+    const [[boat2X, boat2Y], setBoatPos2] = useState(game2.boatPosition);
+    useEffect(() => game2.observe(setBoatPos2));
     function renderSquare(i) {
+        
+        const boatPos = [[boat1X, boat1Y], [boat2X, boat2Y]]
+
         const x = i % 10
         const y = Math.floor(i / 10);
-
+        let isBoat = false;
+        let name = 0;
+        for (let i = 0; i < boatPos.length; i++) {
+            isBoat = boatPos[i][0] === x && boatPos[i][1] === y
+            name = isBoat === true ? i : 0;
+            if (isBoat === true) break;
+        }
+        let gameInput = [game, game2];
         return (
             <div key={i} style={{ width: '10%', height: '10%' }} >
-                <SquareEmpty x={x} y={y} game={game}>
-                    <Piece isBoat={x === boatX && y === boatY} />
+                <SquareEmpty x={x} y={y} game={gameInput} name={1}>
+                    <Piece isBoat={isBoat} />
                 </SquareEmpty>
             </div>
         )

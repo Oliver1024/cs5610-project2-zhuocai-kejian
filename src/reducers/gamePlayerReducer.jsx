@@ -37,25 +37,43 @@ four_vertical_ship(defaultState);
 export default function gameReducer(
     state = defaultState, action
 ) {
-    if (action.type === 'click') {
-        const value = state[action.x][action.y];
+    if (action.type === 'click2') {
+
+
+        let x = 0;
+        let y = 0;
+        let allowed = ['0', 'U2', 'U3', 'U4', 'U5']
+        let found = false;
+        while (found === false) {
+            x = Math.floor(Math.random() * state.length);
+            y = Math.floor(Math.random() * state[0].length);
+            for (let i = 0; i < allowed.length; i++) {
+                if (state[x][y] === allowed[i]) {
+                    found = true;
+                    break;
+                }
+                if (found === true) break;
+            }
+        }
+
+        const value = state[x][y];
         if (value === '0') {
-            state[action.x][action.y] = '1';
+            state[x][y] = '1';
 
         } else if (value === 'U2') {
-            state[action.x][action.y] = 'X2';
+            state[x][y] = 'X2';
         } else if (value === 'U3') {
-            state[action.x][action.y] = 'X3';
-        }else if (value === 'U4') {
-            state[action.x][action.y] = 'X4';
-        }else if (value === 'U5') {
-            state[action.x][action.y] = 'X5';
-        }else if (value === '1') {
-            state[action.x][action.y] = '1';
+            state[x][y] = 'X3';
+        } else if (value === 'U4') {
+            state[x][y] = 'X4';
+        } else if (value === 'U5') {
+            state[x][y] = 'X5';
         } else if (value === 'X') {
-            state[action.x][action.y] = 'X';
+            state[x][y] = 'X';
         }
-        
+        else {
+            state[x][y] = '0'
+        }
         return [...state];
     }
     return state;

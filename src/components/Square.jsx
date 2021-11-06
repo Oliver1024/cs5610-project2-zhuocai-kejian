@@ -10,6 +10,14 @@ export default function Square(props) {
 
     } else if (symbol === '1') {
         className = "square black"
+    } else if (symbol === 'X2') {
+        className = "square blue"
+    } else if (symbol === 'X3') {
+        className = "square green"
+    } else if (symbol === 'X4') {
+        className = "square purple"
+    } else if (symbol === 'X5') {
+        className = "square yellow"
     }
     else {
         className = "square white"
@@ -26,7 +34,15 @@ export default function Square(props) {
                     y: props.y
                 }
             )
-        }} className={className}>
+            setTimeout(() => {
+                dispatch(
+                    {
+                        type: "click2"
+                    }
+                )
+            }, 1000);
+        }
+        } className={className}>
         </div>
     )
 };

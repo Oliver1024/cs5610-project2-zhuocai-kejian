@@ -12,10 +12,12 @@ export default function PlaygroundFreeplay() {
         <React.Fragment>
             <Navbar />
             <Panel />
-            <div className="playground-mid-wrapper">
-                <Board />
+            <div className="playground-mid-wrapper playground">
+                <div className="board-wrapper board-ai">
+                    <div className="board-background"></div>
+                    <Board />
+                </div>
             </div>
-            <h1 className={className}> You win!!!</h1>
         </React.Fragment>
     )
 }
