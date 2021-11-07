@@ -4,6 +4,7 @@ import 'css/style.css'
 import Panel from 'components/Panel'
 import { useDispatch } from 'react-redux';
 
+
 export default function Welcome() {
 
     const dispatch = useDispatch()

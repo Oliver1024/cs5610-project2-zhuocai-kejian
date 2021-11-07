@@ -46,6 +46,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .btn-difficulty{ 
@@ -103,10 +104,6 @@
     position: absolute;
     z-index: 1;
     pointer-events:none;
-}
-
-.control{
-    text-decoration: none;
 }
 
 .tooltiptext .tip-wrapper{
@@ -174,6 +171,7 @@
     justify-content: center;
     text-align: center;
 }
+
 
 /* -----navbar----- */
 .nav-bar{
@@ -314,6 +312,10 @@
 
 }
 
+.disabled-action {
+    pointer-events:none;
+}
+
 /* -----PalyGround----- */
 .playground{
     height: 100vh;
@@ -396,4 +398,98 @@
     width: 100%;
     height: 400%;
     border: 2px solid black;
+}
+
+/* ----- win-wrapper ----- */
+.win-wrapper{
+    z-index: 89;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: Transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win-wrapper-background{
+    z-index: 89;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.win-text-wrapper{
+    z-index: 89;
+    height: 500px;
+    width: 500px;
+    background-image: url("images/board.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+}
+
+.win-text-wrapper #con{
+    color: red;
+    font-size: 2.8rem;
+}
+
+.control-win{
+    display: flex;
+    width: 15%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-image: url("images/home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.control-win:hover{
+    filter: brightness(1.15);
+}
+
+.tooltiptext {
+    visibility: hidden;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    align-items:center;
+    justify-content: center;
+    background-image: url("images/board.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #000;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.2rem;
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-left: 500px;    
+    position: absolute;
+    z-index: 1;
+    pointer-events:none;
+}
+
+.tooltiptext .tip-wrapper{
+    width: 80%;
+    cursor: default;
+    pointer-events:none;
+}
+
+  
+.control-win:hover .tooltiptext {
+    visibility: visible;
 }

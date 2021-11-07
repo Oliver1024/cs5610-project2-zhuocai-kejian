@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
+import { removeLocalStorage } from 'components/Store'
 
 function Navbar() {
 
@@ -17,6 +17,10 @@ function Navbar() {
                         type: "panel-click",
                         active: "true"
                     })}>Help</button>
+                    <button type="button" className="btm btn-danger nav-bar-btn" onClick={() => {
+                        removeLocalStorage();
+                        window.location.reload();
+                    }}>Reset</button>
                 </span>
             </div>
         </div>

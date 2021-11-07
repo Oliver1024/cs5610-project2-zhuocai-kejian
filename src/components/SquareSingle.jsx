@@ -5,10 +5,7 @@ export default function Square(props) {
     let symbol = props.symbol;
     let className = ""
 
-    if (symbol === 'X') {
-        className = "square red"
-
-    } else if (symbol === '1') {
+    if (symbol === '1') {
         className = "square black"
     } else if (symbol === 'X2') {
         className = "square blue"
@@ -24,30 +21,16 @@ export default function Square(props) {
     }
     const dispatch = useDispatch()
 
-
-
-    function handleTimeOut() {
-
-        setTimeout(() => {
-            dispatch(
-                {
-                    type: "click2"
-                }
-            )
-        }, 1000);
-    }
-
     return (
         <div onClick={() => {
             dispatch(
                 {
-                    type: "click",
+                    type: "clickSingle",
                     symbol: symbol,
                     x: props.x,
                     y: props.y
                 }
             )
-            handleTimeOut();
         }
         } className={className}>
         </div>

@@ -4,9 +4,7 @@ import Panel from "components/Panel"
 import Router from 'Router';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducers from './reducers/reducers'
-
-const store = createStore(reducers)
+import store from './components/Store'
 
 ReactDOM.render(
   <Provider store={store}>
