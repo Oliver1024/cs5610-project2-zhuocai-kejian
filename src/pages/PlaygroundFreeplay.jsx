@@ -10,15 +10,20 @@ export default function PlaygroundFreeplay() {
 
     return (
         <React.Fragment>
-            <Navbar />
-            <Panel />
-            <div className="playground-mid-wrapper playground">
-                {win >= 17 ? (<WinPanel />) : ""}
-                <div className="board-wrapper board-ai">
-                    <div className="board-background"></div>
-                    <Board />
+            <div className="page-wrapper">
+                <Panel />
+                <Navbar />
+                <div className="playground-mid-wrapper playground">
+
+                    {win >= 17 ? (<WinPanel />) : ""}
+                    <div className="board-wrapper board-ai">
+                        <div className="board-background"></div>
+                        <Board />
+                    </div>
                 </div>
+
             </div>
+
         </React.Fragment>
     )
 }

@@ -6,6 +6,9 @@ import gamePlayerReducer from 'reducers/gamePlayerReducer'
 import winReducer from 'reducers/winReducer'
 import dragReducer from 'reducers/dragReducer'
 import dragItemReducer from 'reducers/dragItemReducer'
+import winReducerNormal from 'reducers/winReducerNormal'
+import winReducerNormalAI from 'reducers/winReducerNormalAI'
+
 export default combineReducers({
     gamePlayer: gamePlayerReducer,
     click: panelReducer,
@@ -13,5 +16,7 @@ export default combineReducers({
     gameSingle: gameReducerSingle,
     drag: dragReducer,
     winClick: winReducer,
-    dragItem: dragItemReducer
+    dragItem: dragItemReducer,
+    winClickNormal: winReducerNormal,
+    winClickNormalAI: winReducerNormalAI,
 })

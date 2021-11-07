@@ -10,19 +10,25 @@
     flex-direction: column;
     background-image: url("../images/farm.png");
     background-position: center center;
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
 }
 
 .title{
     font-size: 100px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Luckiest Guy', cursive;
+    font-size: 10rem;
 }
 
 .difficulty-selecter-wrapper{
     display: grid;
-    height: 500px;
-    width: 400px;
+    height: 40%;
+    width: 60%;
 
 }
 
@@ -42,7 +48,7 @@
 
 .control{
     display: flex;
-    width: 80%;
+    width: 60%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -51,14 +57,26 @@
 
 .btn-difficulty{ 
     width: 100%;
-    height: 50%;
+    height: 100%;
     background-image: url("images/button.png");
     background-position: center;
-    background-size: 80%;
+    background-size: 55%;
     background-repeat: no-repeat;
     background-color: Transparent;
     font-family: 'Luckiest Guy', cursive;
-    font-size: 1.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    outline: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+
+Link:hover{
     text-decoration: none;
 }
 
@@ -67,8 +85,8 @@
 }
 
 .btn-help{
-    width: 100px;
-    height: 100px;
+    width: 10%;
+    height: 100%;
     background-image: url("images/help.png");
     background-position: center;
     background-size: 80%;
@@ -76,7 +94,7 @@
     background-color: Transparent;
     align-self: center;
     font-family: 'Luckiest Guy', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .btn-help:hover{
@@ -86,8 +104,8 @@
 .tooltiptext {
     visibility: hidden;
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     align-items:center;
     justify-content: center;
     background-image: url("images/board.png");
@@ -99,8 +117,8 @@
     font-family: 'Luckiest Guy', cursive;
     font-size: 1.2rem;
     padding: 5px 0;
-    border-radius: 6px;
-    margin-left: 600px;    
+    margin-left: 50%;
+    border-radius: 6px; 
     position: absolute;
     z-index: 1;
     pointer-events:none;
@@ -119,29 +137,33 @@
 /* -----Panel----- */
 .panel-wrapper {
     position: absolute;
+    top:0;
     z-index: 99;
     width: 100%;
-    height: 100%;
+    bottom:-10vh;
     visibility: hidden;
 }
 
 .panel-wrapper .over-layer{
+    position: absolute;
     width: 100%;
     height: 100%;
     background: black;
     opacity: 50%;
 }
 
+
 .panel-wrapper .panel{
+    z-index: 99px;
     width: 50%;
     position: fixed;
     top: 25%;
     bottom: 25%;
     right: 25%;
-    background: #fff;
-    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    background: transparent;
     z-index: 99;
-    opacity: 90%;
+    opacity: 100%;
+
 }
 .panel .head{
     padding-right: 1rem;
@@ -150,8 +172,11 @@
 }
 
 .close{
-    color: black;
-    font-size: 2rem;
+    color: orange;
+    font-size: 8rem;
+    opacity: 1;
+    border: none;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .panel-visible{
@@ -170,6 +195,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url("images/board.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
 }
 
 
@@ -179,37 +208,79 @@
     padding: 0;
     position: sticky;
     top:0;
-    height:50px;
+    height:10vh;
     width: 100%;
-    background: black;
+    background: transparent;
     display: flex;
     flex-direction: row;
 }
 
+.btn-navbar{ 
+    width: 50%;
+    height: 100%;
+    background-image: url("images/button.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4rem;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    outline: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-navbar:hover{
+    filter: brightness(1.25);
+}
+
+Link:hover{
+    text-decoration: none;
+}
+
+button{
+    outline: none;
+    color: none;
+}
+
+
 .nav-bar-title{
     width:60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar-title .btn-home{
+    height: 100%;
+    background-size: 60%;
+    color: black;
+}
+
+.nav-bar-content{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .nav-bar-control{
     display: flex;
-    width: 40%;
+    width: 50%;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.nav-bar-btn{
-    display:flex;
-    height: 100%;
-    color:white;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-bar-btn{
-    height: 80%;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
+#reset{
+    color: red;
 }
 
 /* -----Board----- */
@@ -312,19 +383,30 @@
 
 }
 
+.safe {
+    border: 6px solid green;
+}
+
 .disabled-action {
     pointer-events:none;
 }
 
 /* -----PalyGround----- */
-.playground{
-    height: 100vh;
+.page-wrapper{
     width: 100%;
-    display: flex;
+    height: 110vh;
     background-image: url("images/background.png");
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+.playground{
+    margin-top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
 }
 
 .playground-double-wrapper{
@@ -405,7 +487,8 @@
     z-index: 89;
     position: absolute;
     width: 100%;
-    height: 100%;
+    top: 0;
+    height: 110vh;
     background-color: Transparent;
     display: flex;
     align-items: center;
@@ -460,10 +543,10 @@
     filter: brightness(1.15);
 }
 
-.tooltiptext {
+.tooltiptext-win {
     visibility: hidden;
     display: flex;
-    width: 200px;
+    width: 200%;
     height: 200px;
     align-items:center;
     justify-content: center;
@@ -477,19 +560,19 @@
     font-size: 1.2rem;
     padding: 5px 0;
     border-radius: 6px;
-    margin-left: 500px;    
+    margin-left: 800%;    
     position: absolute;
     z-index: 1;
     pointer-events:none;
 }
 
-.tooltiptext .tip-wrapper{
+.tooltiptext-win .tip-wrapper-win{
     width: 80%;
     cursor: default;
     pointer-events:none;
 }
 
   
-.control-win:hover .tooltiptext {
+.control-win:hover .tooltiptext-win {
     visibility: visible;
 }

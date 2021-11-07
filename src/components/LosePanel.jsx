@@ -2,21 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { removeLocalStorage } from 'components/Store'
 
-function WinPanel() {
+function LosePanel() {
     return (
         <div className="win-wrapper">
             <div className="win-wrapper-background">
 
             </div>
             <div className="win-text-wrapper win-text">
-                <p id="con">Congratulations!</p>
-                You have found all the animals!
+                <p id="con">Oh no!</p>
+                <p>Bo the Farmer has found</p>
+                all his animals already!
                 <Link to="/" className="control-win" id="free-play" onClick={() => {
                     window.location.replace("/");
                     removeLocalStorage();
                 }}>
-                    <div class="tooltiptext-win">
-                        <div className="tip-wrapper-win">
+                    <div class="tooltiptext">
+                        <div className="tip-wrapper">
                             Back to Homepage
                         </div>
                     </div>
@@ -27,4 +28,4 @@ function WinPanel() {
     )
 }
 
-export default WinPanel
+export default LosePanel

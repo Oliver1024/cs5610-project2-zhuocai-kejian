@@ -13,7 +13,7 @@ export default function panelReducer(
                 className: "panel-wrapper panel-visible",
                 active: "false"
             }
-        } else if (action.active === "false") {
+        } else {
             return {
                 className: "panel-wrapper panel-invisible",
                 active: "false"

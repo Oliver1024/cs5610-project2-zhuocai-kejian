@@ -14,40 +14,39 @@ export default function Welcome() {
             <Panel />
             <div className="welcome-page-wrapper">
                 <div className="title">
-                    WHERE'D U HIDE
+                    <div>WHERE'D U HIDE???</div>
                 </div>
-                <div className="box-with-info">
-                    <div className="difficulty-selecter-wrapper ">
-                        <span className="difficulty">
-                            <Link to="/playground-normal" className="control" >
-                                <button type="button" className="btn btn-difficulty" >
-                                    Normal Game</button>
-                                <span class="tooltiptext">
-                                    <div className="tip-wrapper">
-                                        Start a normal game with a stupid stupid AI!
-                                    </div>
-                                </span>
-                            </Link>
-
-                        </span>
-                        <span className="difficulty">
-                            <Link to="/playground-freeplay" className="control" id="free-play">
-                                <button type="button" className="btn btn-difficulty">Free Play</button>
-                                <div class="tooltiptext">
-                                    <div className="tip-wrapper">
-                                        Get a free play with no one competing with you!
-                                    </div>
+                <div className="difficulty-selecter-wrapper ">
+                    <span className="difficulty">
+                        <Link to="/playground-normal" className="control" style={{ textDecoration: 'none' }}>
+                            <div className="btn-difficulty" >
+                                Normal Game</div>
+                            <span class="tooltiptext">
+                                <div className="tip-wrapper">
+                                    Compete with Farmer Jo, see who can find all animals first!
                                 </div>
-                            </Link>
-                        </span>
-                        <span className="difficulty">
-                            <button className="btn btn-help" onClick={() => dispatch({
-                                type: "panel-click",
-                                active: "true"
-                            })}>?</button>
-                        </span>
-                    </div>
+                            </span>
+                        </Link>
+
+                    </span>
+                    <span className="difficulty">
+                        <Link to="/playground-freeplay" className="control" id="free-play" style={{ textDecoration: 'none' }}>
+                            <div className="btn-difficulty">Free Play</div>
+                            <div class="tooltiptext">
+                                <div className="tip-wrapper">
+                                    Get a free play with no one competing with you!
+                                </div>
+                            </div>
+                        </Link>
+                    </span>
+                    <span className="difficulty">
+                        <button className="btn btn-help" onClick={() => dispatch({
+                            type: "panel-click",
+                            active: "true"
+                        })}>?</button>
+                    </span>
                 </div>
+
             </div>
         </React.Fragment>
 

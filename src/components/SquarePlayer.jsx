@@ -9,7 +9,7 @@ export default function Square(props) {
         className = "square-human red"
 
     } else if (symbol === '1') {
-        className = "square-human gray"
+        className = "square-human gray safe"
     } else if (symbol === 'U2') {
         className = "square-human blue"
     } else if (symbol === 'X2') {
