@@ -20,14 +20,17 @@ export default function Square(props) {
         className = "square yellow"
     }
     else {
-        className = "square white"
+        className = "square white canclick"
     }
     const dispatch = useDispatch()
 
 
 
     function handleTimeOut() {
-
+        let a = document.getElementsByClassName('canclick');
+        for (let i = 0; i < a.length; i++) {
+            a[i].style.pointerEvents = "none";
+        }
         setTimeout(() => {
             dispatch(
                 {

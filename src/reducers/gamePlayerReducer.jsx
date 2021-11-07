@@ -72,6 +72,10 @@ export default function gameReducer(
         else {
             state[x][y] = '0'
         }
+        let a = document.getElementsByClassName('canclick');
+        for (let i = 0; i < a.length; i++) {
+            a[i].style.pointerEvents = "auto";
+        }
         return [...state];
     }
     return state;
