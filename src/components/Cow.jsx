@@ -11,7 +11,7 @@ function Cow() {
 
     const [{ pos }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol },
+        item: { id: symbol, key: "X2", strictX: 0, strictY: 1 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()
@@ -21,7 +21,7 @@ function Cow() {
 
 
     return (
-        <div className="cow"ref={drag} >
+        <div className="cow" ref={drag} >
             <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />
         </div>

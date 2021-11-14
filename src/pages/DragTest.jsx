@@ -1,4 +1,4 @@
-import React,{useMemo} from 'react';
+import React, { useMemo } from 'react';
 import Navbar from 'components/Navbar';
 import Panel from 'components/Panel';
 import Board from 'components/BoardDraggable';
@@ -14,13 +14,16 @@ export default function PlaygroundFreeplay() {
             <div className="page-wrapper">
                 <Panel />
                 <Navbar />
-                <div className="playground-mid-wrapper playground">
+                <div className="playground-mid-wrapper playground drag-wrapper">
 
                     {win >= 17 ? (<WinPanel />) : ""}
                     <div className="board-wrapper board-ai">
                         <div className="board-background"></div>
-                        <Board containers={containers}/>
+                        <Board containers={containers} />
                     </div>
+                    <div className="btn-set" id="reset" onClick={() => {
+                        window.location.reload();
+                    }}>Reset</div>
                 </div>
 
             </div>

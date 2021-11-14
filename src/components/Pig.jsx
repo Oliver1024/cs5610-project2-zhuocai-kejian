@@ -13,7 +13,7 @@ function Pig() {
 
     const [{ pos }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol },
+        item: { id: symbol, key: "X3", strictX: 2, strictY: 0 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()
@@ -23,7 +23,7 @@ function Pig() {
 
 
     return (
-        <div ref={drag} >
+        <div ref={drag} className="pig">
             <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />

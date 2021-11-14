@@ -587,9 +587,51 @@ button{
 .cow{
     display: flex;
     flex-direction: row;
-    margin-right: 100%;
+    margin-left: 100%;
+}
+
+.sheep{
+    margin-top: 330%;
+}
+
+.pig{
+    margin-top: 220%;
 }
 
 .cow:hover{
     border: solid 3px red;
+}
+
+.drag-wrapper{
+    flex-direction: column;
+}
+
+.btn-set{ 
+    width: 50%;
+    height: 20%;
+    background-image: url("images/button.png");
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-color: Transparent;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4rem;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    outline: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chicken{
+    display: flex;
+    flex-direction: row;
+    margin-left: 430%;
+}
+
+#pos1:hover{
+    border: 6px solid red;
 }

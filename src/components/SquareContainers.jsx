@@ -1,9 +1,11 @@
 
 export class Containers {
     positions = {
-        sheep: [2, 2],
-        pig: [5, 5],
-        cow: [6, 6]
+        sheep: [0, 0],
+        pig: [0, 1],
+        pig2: [0, 4],
+        cow: [0, 2],
+        chicken: [4, 0]
     }
 
     movePosition(name, toX, toY) {

@@ -8,8 +8,13 @@ export default function Square(props) {
         className = "square-human purple"
     } else if (symbol === "pig") {
         className = "square-human green"
+    }
+    else if (symbol === "pig2") {
+        className = "square-human green"
     } else if (symbol === "cow") {
         className = "square-human blue"
+    } else if (symbol === "chicken") {
+        className = "square-human yellow"
     }
 
     return (

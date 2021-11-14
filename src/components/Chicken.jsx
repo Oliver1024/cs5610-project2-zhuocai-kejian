@@ -6,14 +6,12 @@ import { useDrag } from 'react-dnd'
 import { useDispatch } from "react-redux";
 
 
-function Sheep() {
-    const dispatch = useDispatch()
-
-    const symbol = "sheep"
+function Chicken() {
+    const symbol = "chicken"
 
     const [{ pos }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol, key: "X4", strictX: 3, strictY: 0 },
+        item: { id: symbol, key: "X5", strictX: 0, strictY: 4 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()
@@ -23,7 +21,8 @@ function Sheep() {
 
 
     return (
-        <div ref={drag} className="sheep">
+        <div className="chicken" ref={drag} >
+            <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />
             <SquareDraggable symbol={symbol} />
@@ -32,4 +31,4 @@ function Sheep() {
     )
 }
 
-export default Sheep
+export default Chicken

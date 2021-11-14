@@ -12,8 +12,6 @@ Hover - show a variation of the above states of the user is hovering over a tile
 
  */
 
-import { five_horizontal_ship, two_horizontal_ship, three_vertical_ship, four_vertical_ship } from "commons/helpers"
-
 const defaultState = [
     ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
     ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
@@ -30,7 +28,7 @@ const defaultState = [
 export default function gameReducer(
     state = defaultState, action
 ) {
-    if (action.type === 'drag') {
+    if (action.type === 'render') {
         state[action.x][action.y] = action.symbol;
 
         return [...state];
