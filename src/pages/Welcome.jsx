@@ -40,6 +40,16 @@ export default function Welcome() {
                         </Link>
                     </span>
                     <span className="difficulty">
+                        <Link to="/drag-test" className="control" id="free-play" style={{ textDecoration: 'none' }}>
+                            <div className="btn-difficulty">Drag Test</div>
+                            <div class="tooltiptext">
+                                <div className="tip-wrapper">
+                                    Get a free play with no one competing with you!
+                                </div>
+                            </div>
+                        </Link>
+                    </span>
+                    <span className="difficulty">
                         <button className="btn btn-help" onClick={() => dispatch({
                             type: "panel-click",
                             active: "true"

@@ -1,22 +1,30 @@
-import React, { useMemo } from 'react'
-import Boat from 'components/Boat'
-import BoardHuman from 'components/BoardHuman'
+import React,{useMemo} from 'react';
+import Navbar from 'components/Navbar';
+import Panel from 'components/Panel';
+import Board from 'components/BoardDraggable';
 import { useSelector } from 'react-redux';
+import WinPanel from 'components/WinPanel';
+import { Containers } from "components/SquareContainers"
 
-
-function DragTest() {
-
-
-
+export default function PlaygroundFreeplay() {
+    const win = useSelector((state) => state.winClick)
+    const containers = useMemo(() => new Containers(), [])
     return (
-        <div>
+        <React.Fragment>
             <div className="page-wrapper">
-                <div className="drag-container">
+                <Panel />
+                <Navbar />
+                <div className="playground-mid-wrapper playground">
+
+                    {win >= 17 ? (<WinPanel />) : ""}
+                    <div className="board-wrapper board-ai">
+                        <div className="board-background"></div>
+                        <Board containers={containers}/>
+                    </div>
                 </div>
-                <BoardHuman />
+
             </div>
-        </div>
+
+        </React.Fragment>
     )
 }
-
-export default DragTest

@@ -3,6 +3,7 @@ import panelReducer from 'reducers/panelReducer'
 import gameReducer from 'reducers/gameReducer'
 import gameReducerSingle from 'reducers/gameReducerSingle'
 import gamePlayerReducer from 'reducers/gamePlayerReducer'
+import gameReducerDrag from 'reducers/gameReducerDrag'
 import winReducer from 'reducers/winReducer'
 import dragReducer from 'reducers/dragReducer'
 import dragItemReducer from 'reducers/dragItemReducer'
@@ -14,9 +15,9 @@ export default combineReducers({
     click: panelReducer,
     game: gameReducer,
     gameSingle: gameReducerSingle,
-    drag: dragReducer,
     winClick: winReducer,
     dragItem: dragItemReducer,
     winClickNormal: winReducerNormal,
     winClickNormalAI: winReducerNormalAI,
+    drag: gameReducerDrag
 })

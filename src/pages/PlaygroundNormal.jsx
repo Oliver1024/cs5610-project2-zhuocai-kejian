@@ -14,7 +14,7 @@ export default function PlaygroundNormal() {
     for (let i = 0; i < aiBoardState.length; i++) {
         let row = aiBoardState[i]
         for (let j = 0; j < aiBoardState[0].length; j++) {
-            if (row[j] == 'X2' || row[j] == 'X3' || row[j] == 'X4' || row[j] == 'X5') winAI += 1;
+            if (row[j] === 'X2' || row[j] === 'X3' || row[j] === 'X4' || row[j] === 'X5') winAI += 1;
         }
     }
     console.log(winAI)

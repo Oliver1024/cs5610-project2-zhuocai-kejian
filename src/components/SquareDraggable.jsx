@@ -1,0 +1,19 @@
+import React from "react";
+
+export default function Square(props) {
+    let symbol = props.symbol;
+    let className = ""
+
+    if (symbol === "sheep") {
+        className = "square-human purple"
+    } else if (symbol === "pig") {
+        className = "square-human green"
+    } else if (symbol === "cow") {
+        className = "square-human blue"
+    }
+
+    return (
+        <div className={className}>
+        </div>
+    )
+};

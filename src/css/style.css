@@ -308,6 +308,12 @@ button{
     cursor: not-allowed;
 }
 
+.square-empty{
+    width: 60px;
+    height: 60px;
+    border: 1px solid orange;
+}
+
 .square:hover{
     border: 6px solid orange;
     border-radius: 0.55px;
@@ -575,4 +581,15 @@ button{
   
 .control-win:hover .tooltiptext-win {
     visibility: visible;
+}
+
+/* -----Containers----- */
+.cow{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100%;
+}
+
+.cow:hover{
+    border: solid 3px red;
 }
