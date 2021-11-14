@@ -18,7 +18,7 @@ export default function Square(props) {
     }
 
     return (
-        <div className={className}>
+        <div className={className} >
         </div>
     )
 };

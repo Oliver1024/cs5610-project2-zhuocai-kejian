@@ -9,9 +9,9 @@ import { useDispatch } from "react-redux";
 function Cow() {
     const symbol = "cow"
 
-    const [{ pos }, drag] = useDrag(() => ({
+    const [{ isDragging }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol, key: "X2", strictX: 0, strictY: 1 },
+        item: { id: symbol, key: "U2", strictX: 0, strictY: 1 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()
@@ -22,7 +22,7 @@ function Cow() {
 
     return (
         <div className="cow" ref={drag} >
-            <SquareDraggable symbol={symbol} />
+            <SquareDraggable symbol={symbol} isDragging={isDragging} />
             <SquareDraggable symbol={symbol} />
         </div>
     )

@@ -18,7 +18,12 @@ export default function Welcome() {
                 </div>
                 <div className="difficulty-selecter-wrapper ">
                     <span className="difficulty">
-                        <Link to="/playground-normal" className="control" style={{ textDecoration: 'none' }}>
+                        <Link to="/preparation" className="control" style={{ textDecoration: 'none' }} onClick={() => {
+                            dispatch({
+                                type: "first-open",
+                                active: "true"
+                            })
+                        }}>
                             <div className="btn-difficulty" >
                                 Normal Game</div>
                             <span class="tooltiptext">
@@ -30,18 +35,13 @@ export default function Welcome() {
 
                     </span>
                     <span className="difficulty">
-                        <Link to="/playground-freeplay" className="control" id="free-play" style={{ textDecoration: 'none' }}>
+                        <Link to="/playground-freeplay" className="control" id="free-play" style={{ textDecoration: 'none' }} onClick={() => {
+                            dispatch({
+                                type: "first-open",
+                                active: "true"
+                            })
+                        }}>
                             <div className="btn-difficulty">Free Play</div>
-                            <div class="tooltiptext">
-                                <div className="tip-wrapper">
-                                    Get a free play with no one competing with you!
-                                </div>
-                            </div>
-                        </Link>
-                    </span>
-                    <span className="difficulty">
-                        <Link to="/drag-test" className="control" id="free-play" style={{ textDecoration: 'none' }}>
-                            <div className="btn-difficulty">Drag Test</div>
                             <div class="tooltiptext">
                                 <div className="tip-wrapper">
                                     Get a free play with no one competing with you!

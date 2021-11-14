@@ -9,9 +9,9 @@ import { useDispatch } from "react-redux";
 function Chicken() {
     const symbol = "chicken"
 
-    const [{ pos }, drag] = useDrag(() => ({
+    const [{ isDragging }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol, key: "X5", strictX: 0, strictY: 4 },
+        item: { id: symbol, key: "U5", strictX: 0, strictY: 4 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()

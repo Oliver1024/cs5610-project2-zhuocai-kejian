@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from 'components/Navbar';
+import Navbar from 'components/NavbarNormal';
 import Panel from 'components/Panel';
 import Board from 'components/Board';
 import BoardPlayer from 'components/BoardPlayer';

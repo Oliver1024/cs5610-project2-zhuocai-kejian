@@ -13,7 +13,7 @@ function Pig() {
 
     const [{ pos }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol, key: "X3", strictX: 2, strictY: 0 },
+        item: { id: symbol, key: "U3", strictX: 2, strictY: 0 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()

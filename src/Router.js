@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Welcome from 'pages/Welcome'
 import PlaygroundFreeplay from 'pages/PlaygroundFreeplay'
 import PlaygroundNormal from 'pages/PlaygroundNormal'
-import Drag from 'pages/DragTest'
+import Drag from 'pages/Preparation'
 
 
 export default function Router() {
@@ -14,7 +14,7 @@ export default function Router() {
                 <Route path="/playground-freeplay" component={PlaygroundFreeplay} />
                 <Route path="/playground-normal" component={PlaygroundNormal} />
                 {/* rememeber to delete test */}
-                <Route path="/drag-test" component={Drag} />
+                <Route path="/preparation" component={Drag} />
             </Switch>
         </BrowserRouter>
     )

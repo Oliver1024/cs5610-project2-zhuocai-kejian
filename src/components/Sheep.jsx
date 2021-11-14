@@ -13,7 +13,7 @@ function Sheep() {
 
     const [{ pos }, drag] = useDrag(() => ({
         type: ItemTypes.SQUARE,
-        item: { id: symbol, key: "X4", strictX: 3, strictY: 0 },
+        item: { id: symbol, key: "U4", strictX: 3, strictY: 0 },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
             pos: monitor.getClientOffset()

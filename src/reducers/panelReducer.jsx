@@ -16,8 +16,13 @@ export default function panelReducer(
         } else {
             return {
                 className: "panel-wrapper panel-invisible",
-                active: "false"
+                active: "true"
             }
+        }
+    } else if (action.type === "first-open") {
+        return {
+            className: "panel-wrapper panel-visible",
+            active: "true"
         }
     }
     return state;

@@ -76,9 +76,6 @@
     color: black;
 }
 
-Link:hover{
-    text-decoration: none;
-}
 
 .btn-difficulty:hover{
     filter: brightness(1.25);
@@ -199,12 +196,14 @@ Link:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 70%;
+    font-size: 1.5rem;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 
 /* -----navbar----- */
 .nav-bar{
-    z-index: 99;
+    z-index: 80;
     padding: 0;
     position: sticky;
     top:0;
@@ -281,6 +280,7 @@ button{
 
 #reset{
     color: red;
+    text-decoration: none;
 }
 
 /* -----Board----- */
@@ -588,17 +588,20 @@ button{
     display: flex;
     flex-direction: row;
     margin-left: 100%;
+    cursor: pointer;
 }
 
 .sheep{
     margin-top: 330%;
+    cursor: pointer;
 }
 
 .pig{
     margin-top: 220%;
+    cursor: pointer;
 }
 
-.cow:hover{
+.cow:hover #pos1{
     border: solid 3px red;
 }
 
@@ -630,8 +633,22 @@ button{
     display: flex;
     flex-direction: row;
     margin-left: 430%;
+    cursor: pointer;
 }
 
 #pos1:hover{
+    border: 6px solid red;
+}
+
+#set{
+    color: red;
+    text-decoration: none;
+}
+
+#set:hover{
+    filter: brightness(1.25);
+}
+
+.cow #cowPos1:hove{
     border: 6px solid red;
 }

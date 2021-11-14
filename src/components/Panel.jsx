@@ -18,7 +18,38 @@ const Panel = () => {
                     })}>x</span>
                 </div>
                 <div className="text-wrapper">
+                    {window.location.pathname === "/preparation" ?
+                        <div className="">
+                            <p>Hide Jo's animals to anywhere on board!</p>
+                            <br />
+                            <p>Remember:</p>
+                            <p>They love to stay together, </p>
+                            <p>so can only be dragged together!</p>
+                        </div>
 
+                        : ""}
+                    {window.location.pathname === "/playground-freeplay" ?
+                        <div className="">
+                            <p>Find out every one of your animals!</p>
+                            <br />
+                            <p>Don't rush</p>
+                            <p>No one is competing with you! </p>
+                        </div>
+                        : ""}
+                    {window.location.pathname === "/playground-normal" ?
+                        <div className="">
+                            <p>Your animals are all hidden on the left</p>
+                            <p>Click the bush to find them!</p>
+                            <br />
+                            <p>Hurry up!</p>
+                            <p>Don't let Jo beat you up!</p>
+                        </div> : ""}
+                    {window.location.pathname === "/" ?
+                        <div className="">
+                            <p>Your animals are hiding themselves up!</p>
+                            <p>They must be in the bushes!</p>
+                            <p>Let's find them out!</p>
+                        </div> : ""}
                 </div>
             </div>
         </div>

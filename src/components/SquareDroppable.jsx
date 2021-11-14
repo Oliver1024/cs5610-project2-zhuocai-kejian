@@ -12,7 +12,6 @@ import { useDrop, useDrag } from 'react-dnd'
 export default function Square({ onChange, containers, boardstate, symbol, children, x, y }) {
     const draggingItem = useSelector((state) => state.dragItem)
     const dispatch = useDispatch()
-    const [itemState, setItemState] = useState("0")
 
     const [{ a, pos }, drop] = useDrop(() => ({
         accept: ItemTypes.SQUARE,
@@ -24,7 +23,6 @@ export default function Square({ onChange, containers, boardstate, symbol, child
             let preX = containers.positions[item.id][0];
             let preY = containers.positions[item.id][1];
             containers.movePosition(item.id, x, y)
-            setItemState(item.id)
             setCurBaord(preX, preY, item.strictX, item.strictY, boardstate, '0')
             setCurBaord(x, y, item.strictX, item.strictY, boardstate, item.key)
             onChange([...boardstate])

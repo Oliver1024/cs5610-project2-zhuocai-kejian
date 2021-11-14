@@ -28,11 +28,11 @@ const defaultState = [
 ];
 
 
-five_horizontal_ship(defaultState);
-two_horizontal_ship(defaultState);
-three_vertical_ship(defaultState);
-three_vertical_ship(defaultState);
-four_vertical_ship(defaultState);
+// five_horizontal_ship(defaultState);
+// two_horizontal_ship(defaultState);
+// three_vertical_ship(defaultState);
+// three_vertical_ship(defaultState);
+// four_vertical_ship(defaultState);
 
 export default function gameReducer(
     state = defaultState, action
@@ -76,6 +76,11 @@ export default function gameReducer(
         for (let i = 0; i < a.length; i++) {
             a[i].style.pointerEvents = "auto";
         }
+        return [...state];
+    }
+
+    else if(action.type === 'set') {
+        state = action.board;
         return [...state];
     }
     return state;
