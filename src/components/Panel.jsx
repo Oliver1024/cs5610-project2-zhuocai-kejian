@@ -19,7 +19,7 @@ const Panel = () => {
                 </div>
                 <div className="text-wrapper">
                     {window.location.pathname === "/preparation" ?
-                        <div className="">
+                        <div className="words">
                             <p>Hide Jo's animals to anywhere on board!</p>
                             <br />
                             <p>Remember:</p>
@@ -29,7 +29,7 @@ const Panel = () => {
 
                         : ""}
                     {window.location.pathname === "/playground-freeplay" ?
-                        <div className="">
+                        <div className="words">
                             <p>Find out every one of your animals!</p>
                             <br />
                             <p>Don't rush</p>
@@ -37,7 +37,7 @@ const Panel = () => {
                         </div>
                         : ""}
                     {window.location.pathname === "/playground-normal" ?
-                        <div className="">
+                        <div className="words">
                             <p>Your animals are all hidden on the left</p>
                             <p>Click the bush to find them!</p>
                             <br />
@@ -45,7 +45,7 @@ const Panel = () => {
                             <p>Don't let Jo beat you up!</p>
                         </div> : ""}
                     {window.location.pathname === "/" ?
-                        <div className="">
+                        <div className="words">
                             <p>Your animals are hiding themselves up!</p>
                             <p>They must be in the bushes!</p>
                             <p>Let's find them out!</p>

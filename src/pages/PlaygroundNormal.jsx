@@ -21,11 +21,11 @@ export default function PlaygroundNormal() {
 
     return (
         <React.Fragment>
+            <Navbar />
+            <Panel />
             <div className="page-wrapper">
-                <Navbar />
-                <Panel />
                 <div className="playground-double-wrapper playground">
-                    {winHuman >= 17 ? (<WinPanel />) : ""}
+                    {winHuman >= 1 ? (<WinPanel />) : ""}
                     {winAI >= 17 ? (<LosePanel />) : ""}
                     <div className="board-wrapper board-ai">
                         <div className="board-background"></div>

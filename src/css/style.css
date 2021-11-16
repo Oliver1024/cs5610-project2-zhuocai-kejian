@@ -25,6 +25,7 @@
     font-size: 10rem;
 }
 
+
 .difficulty-selecter-wrapper{
     display: grid;
     height: 40%;
@@ -290,8 +291,8 @@ button{
     background-color: Transparent;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(10, 60px);
-    grid-template-rows: repeat(10, 60px);
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
 }
 
 /* -----Square----- */
@@ -651,4 +652,516 @@ button{
 
 .cow #cowPos1:hove{
     border: 6px solid red;
+}
+
+@media (max-width: 900px) {
+    .welcome-page-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("../images/farm.png");
+        background-position: center center;
+        background-size: 130%;
+        background-repeat: no-repeat;
+    }
+
+    .title{
+        width: 100%;
+        height: 30%;
+        margin-top: 30%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 2.5rem;
+    }
+
+    .control{
+        height: 50px;
+    }
+    .difficulty-selecter-wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 60%;
+    }
+    
+    .box-with-info {
+        display: grid;
+        grid-template-rows: 1fr, 3fr, 1fr;
+    }
+    
+    .difficulty{
+        display: flex;
+        width: 100%;
+        height: 80px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .control{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .btn-difficulty{ 
+        width: 100%;
+        height: 100%;
+        background-image: url("images/button.png");
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-color: Transparent;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        border: none;
+        outline: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        color: black;
+    }
+    
+    
+    .btn-difficulty:hover{
+        filter: brightness(1.25);
+    }
+
+    .btn-help{
+        width: 30%;
+        height: 100%;
+        background-image: url("images/help.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: Transparent;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 3rem;
+    }
+
+    .tooltiptext {
+        display: none;
+        height: 0;
+    }
+    
+    .tooltiptext .tip-wrapper{
+        display: none;
+        width: 0;
+        cursor: default;
+        pointer-events:none;
+    }
+      
+    .control:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    .panel-wrapper {
+        position: absolute;
+        top:0;
+        z-index: 99;
+        width: 100%;
+        bottom:0;
+        visibility: hidden;
+    }
+    
+    .panel-wrapper .over-layer{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        opacity: 50%;
+    }
+    
+    
+    .panel-wrapper .panel{
+        z-index: 99px;
+        width: 100%;
+        position: fixed;
+        top: 25%;
+        bottom: 25%;
+        right: 0;
+        background: transparent;
+        z-index: 99;
+        opacity: 100%;
+    
+    }
+    .panel .head{
+        padding-right: 1rem;
+        text-align: right;
+        
+    }
+    
+    .close{
+        color: orange;
+        font-size: 4rem;
+        opacity: 1;
+        border: none;
+        font-family: 'Luckiest Guy', cursive;
+    }
+    
+    .panel-visible{
+        visibility: visible;
+    }
+    
+    .panel-invisible{
+        visibility: hidden;
+    }
+    
+    .text-wrapper{
+        display: flex;
+        width: 100%;
+        height: 70%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url("images/board.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-size: 1rem;
+        font-family: 'Luckiest Guy', cursive;
+    }
+
+    .words{
+        width: 60%;
+    }
+
+    .nav-bar{
+        z-index: 80;
+        padding: 0;
+        position: sticky;
+        top:0;
+        height:10vh;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .btn-navbar{ 
+        width: 100%;
+        height: 100%;
+        background-image: url("images/button.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: Transparent;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        border: none;
+        outline: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .btn-navbar:hover{
+        filter: brightness(1.25);
+    }
+    
+    Link:hover{
+        text-decoration: none;
+    }
+    
+    button{
+        outline: none;
+        color: none;
+    }
+    
+    
+    .nav-bar-title{
+        width:50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-bar-title .btn-home{
+        height: 100%;
+        width: 100%;
+        background-size: 60%;
+        font-size: 1rem;
+        color: black;
+    }
+    
+    .nav-bar-content{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .nav-bar-control{
+        display: flex;
+        width: 60%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #reset{
+        color: red;
+        text-decoration: none;
+    }
+
+    .playground-mid-wrapper{
+        margin-top:-10vh;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-background{
+        position: relative;
+        opacity: 0.3;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(122, 93, 11);
+    }
+    
+    .board-wrapper{
+        
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .square{ 
+        width: 25px;
+        height: 25px;
+        cursor: pointer
+    }
+    
+    .square-human{ 
+        width: 25px;
+        height: 25px;
+        cursor: not-allowed;
+    }
+    
+    .square-empty{
+        width: 25px;
+        height: 25px;
+        border: 1px solid orange;
+    }
+    
+    .square:hover{
+        border: 6px solid orange;
+        border-radius: 0.55px;
+    }
+
+    .page-wrapper{
+        width: 100%;
+        height: 80vh;
+        background-image: none;
+        background-position: 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .btn-set{ 
+        width: 100%;
+        height: 20%;
+        background-image: url("images/button.png");
+        background-position: center;
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-color: Transparent;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 2rem;
+        text-decoration: none;
+        display: flex;
+        border: none;
+        outline: none;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .playground-double-wrapper{
+        margin-top: -10vh;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-ai{
+      margin-bottom: 20px;
+    }
+
+    .black{ 
+        background-image: url("images/grass-empty.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+        cursor: not-allowed;
+    }
+    
+    .white{ 
+        background-image: url("images/grass.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .red{ 
+        background-color:red;
+        pointer-events:none;
+    }
+    
+    .green{ 
+        background-image: url("images/pig.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+        cursor: not-allowed;
+    }
+    
+    .blue{ 
+        background-image: url("images/cow.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+        cursor: not-allowed;
+    }
+    
+    .purple{ 
+        background-image: url("images/sheep.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+        cursor: not-allowed;
+    }
+    
+    .yellow{ 
+        background-image: url("images/chicken.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+        cursor: not-allowed;
+    }
+    
+    .gray {
+        background-image: url("images/grass-empty.png");
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: not-allowed;
+    }
+    
+    .caught { 
+        border: 3px solid red;
+    
+    }
+    
+    .safe {
+        border: 3px solid green;
+    }
+
+    .square:hover{
+        border: none;
+        border-radius: 0;
+    }
+
+    .win-wrapper{
+        z-index: 89;
+        position: absolute;
+        width: 100%;
+        top: -10vh;
+        height: 100vh;
+        background-color: Transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .win-wrapper-background{
+        z-index: 89;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        opacity: 0.8;
+    }
+    
+    .win-text-wrapper{
+        z-index: 89;
+        height: 500px;
+        width: 500px;
+        background-image: url("images/board.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1.5rem;
+    }
+    
+    .win-text-wrapper #con{
+        color: red;
+        font-size: 2rem;
+    }
+    
+    .control-win{
+        display: flex;
+        width: 15%;
+        height: 15%;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-image: url("images/home.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    .control-win:hover{
+        filter: brightness(1.15);
+    }
+    
+    .tooltiptext-win {
+        display: none;
+    }
+    
+    .tooltiptext-win .tip-wrapper-win{
+        display: none;
+    }
+    
+      
+    .control-win:hover .tooltiptext-win {
+        visibility: visible;
+    }
 }
