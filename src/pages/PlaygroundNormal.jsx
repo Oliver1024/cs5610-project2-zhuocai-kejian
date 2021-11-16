@@ -25,7 +25,7 @@ export default function PlaygroundNormal() {
             <Panel />
             <div className="page-wrapper">
                 <div className="playground-double-wrapper playground">
-                    {winHuman >= 1 ? (<WinPanel />) : ""}
+                    {winHuman >= 17 ? (<WinPanel />) : ""}
                     {winAI >= 17 ? (<LosePanel />) : ""}
                     <div className="board-wrapper board-ai">
                         <div className="board-background"></div>
