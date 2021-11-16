@@ -38,8 +38,8 @@ const Panel = () => {
                         : ""}
                     {window.location.pathname === "/playground-normal" ?
                         <div className="words">
-                            <p>Your animals are all hidden on the left</p>
-                            <p>Click the bush to find them!</p>
+                            <p>Your animals are all hidden in bushes</p>
+                            <p>Click the bush to find them out!</p>
                             <br />
                             <p>Hurry up!</p>
                             <p>Don't let Jo beat you up!</p>
