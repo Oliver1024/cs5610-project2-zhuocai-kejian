@@ -400,8 +400,9 @@ button{
 
 /* -----PalyGround----- */
 .page-wrapper{
+    margin-top: -10vh;
     width: 100%;
-    height: 110vh;
+    height: 120vh;
     background-image: url("images/background.png");
     background-position: center;
     background-size: 100%;
