@@ -17,6 +17,13 @@ Currently AI only pick from random accessible square. If more time is given, I t
 Redux is not always helpful. Espeically when I only need to focus on state of a specific component and only its child, useState, useReducer and useMemo is useful enough rather than create a new redux reducer.
 ### IV.How long did this assignment take to complete?
 Over a week and for about 50 hours. Styling is also a very tiring work to be done.
+### Heroku Link
+https://where-d-u-hide.herokuapp.com/ 
+### Collaborator 
+Zhuocai Li
+### Bonus points
+We have finished both of the bonus points.
 
 ## New Update (11.7):
 Based on the latest version and thorough thoughts, the game is now currently designed into a new farm game, which allows you to find hidden animals.
+
